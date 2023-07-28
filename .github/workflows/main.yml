@@ -1,0 +1,23 @@
+name: Get Satellite Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  get-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get satellite image
+        uses: google-actions/gcp-earthengine@v1
+        with:
+          action: getImage
+          bbox: -122.42,37.78,-122.34,37.86
+          output_filename: image.png
+      - name: Export artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: image
+          path: image.png
