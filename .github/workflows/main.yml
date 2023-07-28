@@ -17,14 +17,11 @@ jobs:
       run: |
         pip install earthengine-api
 
-    - name: Authenticate with Google Cloud SDK
-      run: |
-        curl https://sdk.cloud.google.com | bash
-        exec -l $SHELL
-        gcloud auth application-default login --quiet
-
     - name: Clone repository
       uses: actions/checkout@v2
+
+    - name: Authenticate with Earth Engine
+      run: earthengine authenticate --quiet
 
     - name: Run Earth Engine script
       run: python script.py  # Assuming the script.py is in the main directory
