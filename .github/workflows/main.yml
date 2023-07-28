@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Get satellite image
-        uses: google-actions/gcp-earthengine@v1
+        uses: google-actions/gcp-earthengine@v3
         with:
           action: getImage
           bbox: -122.42,37.78,-122.34,37.86
