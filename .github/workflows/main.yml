@@ -22,11 +22,11 @@ jobs:
 
     - name: Save Earth Engine credentials
       run: |
-        echo "${{ secrets.EARTH_ENGINE_CREDENTIALS }}" > keyfile.json
+        echo "${{ secrets.EARTH_ENGINE_CREDENTIALS }}" > treed-world-e2841ea9ba8b.json
 
     - name: Set up Google Cloud SDK with Service Account key
       run: |
-        gcloud auth activate-service-account --key-file=keyfile.json
+        gcloud auth activate-service-account --key-file=treed-world-e2841ea9ba8b.json
 
     - name: Run Earth Engine script
       run: python script.py  # Assuming the script.py is in the main directory
