@@ -1,4 +1,4 @@
-name: Earth Engine Workflow
+name: earth Engine Workflow
 on:
   push:
     branches:
