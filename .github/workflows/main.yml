@@ -20,8 +20,10 @@ jobs:
     - name: Clone repository
       uses: actions/checkout@v2
 
-    - name: Authenticate with Earth Engine
-      run: earthengine authenticate --quiet
+    - name: Set up Google Cloud SDK with Service Account key
+      run: |
+        echo $EARTH_ENGINE_CREDENTIALS > keyfile.json
+        gcloud auth activate-service-account --key-file=keyfile.json
 
     - name: Run Earth Engine script
       run: python script.py  # Assuming the script.py is in the main directory
