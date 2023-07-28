@@ -11,15 +11,20 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.11'  # Use Python 3.11
-
-    - name: Clone repository
-      uses: actions/checkout@v2
+        python-version: '3.x'  # Replace 'x' with your desired Python version
 
     - name: Install Earth Engine Python API
       run: |
         pip install earthengine-api
-        earthengine authenticate
+
+    - name: Set up Google Cloud SDK
+      run: |
+        curl https://sdk.cloud.google.com | bash
+        exec -l $SHELL
+        gcloud auth application-default login --quiet
+
+    - name: Clone repository
+      uses: actions/checkout@v2
 
     - name: Run Earth Engine script
       run: python script.py  # Assuming the script.py is in the main directory
@@ -27,7 +32,7 @@ jobs:
     - name: Move exported image as an artifact
       run: |
         mkdir -p artifacts
-        mv exported_image.tif artifacts/  # Assuming the exported_image.tif is in the main directory
+        mv exported_image.tif artifacts/
       continue-on-error: true
 
     - name: Upload artifact
