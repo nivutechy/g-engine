@@ -11,7 +11,7 @@ def get_satellite_image(bbox=[longitude_west_default, latitude_south_default, lo
     # Get a satellite image (e.g., Landsat 8 imagery)
     image = ee.ImageCollection('LANDSAT/LC08/C01/T1_TOA') \
         .filterBounds(region) \
-        .filterDate('2020-01-01', '2023-02-01') \
+        .filterDate('YYYY-MM-DD', 'YYYY-MM-DD') \
         .first()
 
     # Export the image to Google Drive
