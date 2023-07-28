@@ -1,23 +1,38 @@
-name: Get Satellite Image
-
+name: Earth Engine Workflow
 on:
   push:
     branches:
       - main
 
 jobs:
-  get-image:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Get satellite image
-        uses: earthengine-public/earthengine-github-action@v2
-        with:
-          action: getImage
-          bbox: -122.42,37.78,-122.34,37.86
-          output_filename: image.png
-      - name: Export artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: image
-          path: image.png
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'  # Use Python 3.11
+
+    - name: Clone repository
+      uses: actions/checkout@v2
+
+    - name: Install Earth Engine Python API
+      run: |
+        pip install earthengine-api
+        earthengine authenticate
+
+    - name: Run Earth Engine script
+      run: python script.py  # Assuming the script.py is in the main directory
+
+    - name: Move exported image as an artifact
+      run: |
+        mkdir -p artifacts
+        mv exported_image.tif artifacts/  # Assuming the exported_image.tif is in the main directory
+      continue-on-error: true
+
+    - name: Upload artifact
+      if: success()
+      uses: actions/upload-artifact@v2
+      with:
+        name: exported-image
+        path: artifacts/exported_image.tif
