@@ -1,4 +1,4 @@
-name: earth Engine Workflow
+name: Earth Engine Workflow
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
       run: |
         pip install earthengine-api
 
-    - name: Set up Google Cloud SDK
+    - name: Authenticate with Google Cloud SDK
       run: |
         curl https://sdk.cloud.google.com | bash
         exec -l $SHELL
