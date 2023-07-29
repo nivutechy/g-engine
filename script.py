@@ -1,7 +1,8 @@
 import ee
 
-# Initialize Earth Engine
-ee.Initialize()
+def main():
+    # Replace '/path/to/keyfile.json' with the actual path in the main folder
+    ee.Initialize(ee.ServiceAccountCredentials("", keyfile="keyfile.json"))
 
 # Function to get satellite imagery
 def get_satellite_image(bbox=[longitude_west_default, latitude_south_default, longitude_east_default, latitude_north_default]):
