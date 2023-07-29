@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "treed-world",
+  "private_key_id": "e2841ea9ba8bbb43583c7792db2b0eb346773182",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDg6aUggFGWm5Lr\nDXgeonnHDVPp2lkoY047hqxxzfRHb9gCT1GQCrcxgccvLzoRNGtsdsecV6in35ig\nxpWvC/NMScpmqNlJ/1NDCE9JWxFGiy6rhD1O+crhddeu8TrllQgnB+ayKud1Krgh\n54uOeYAUu70Ies+KYbu1ffsBipgqnyOAr7FuG8LIJ/IWKp68Tvry0YbF3DCorE0w\nfy8dWt5RGaiYoppZQ9o5I9FE0sUvetD9czCzhyQ7Yk59AhmmXeiB/8o+rVBT3kyk\np4IcdZ3Wc3U7SUor1fETpDpxmS0xcaGGEgnk3/DGvDHl/3nuuHs0xXV0gi0s3mZ+\nuEsTWkZdAgMBAAECggEALL/gFnThht1CYJkn9rRuFWA9+2/xwFrt1GMpyWTofxQu\nPttoR4gSRfvj1SwI2iZ7XzPM6Hr6eBhBZm/MlW0DxgCCkGV1AkeWWeZ73AUODWKg\n8QhZKG8D4lMPjGO7y7UYz6c/S+DEd6f9xeUre7gJ91YZOOgyhf6HGgfMWtSoDQaI\nRtouIe2COuSVUqUjLZMDVuoxzLxbt8hSbVT0j8hgtksWV5WR/sBWlsOfxtQE0oXB\nUoeAQ6rfTVgsaOnZ451dhoYT45m/r6/+903rQJEoGv2qGNSuYcExR+luVRA1onSD\nHEXBqXLZHT2wBRnsafRMINPpb2Al9k6YSv1Kuj3r0QKBgQD104FD9Wa6Pq+xx9bd\nbpOeLwakta5UG4gBT1Dudj466TtyCnmcepU1LqWInul12Clwp8jE4l6rWQY4mkRo\nZ7QFSnA83sIsvZX+4cU4G6ev9WSLteuKHyffWfmOm5/KGe16o+ioeAAi7sRL21Jz\nOmbRVP0AzauSo0YczrnYSeGxWQKBgQDqOJBxprGiQLb7rPAN22W59mKcHQkSIsp5\nD6dKOpVwKUDsZj+n8PQjOlV5/GMtOoFkGThhDhXZ6hNpBLrUcmF/zKivCosPnLBd\nFqYfqmSgRzYi8lJtg95L0PToRmtcTjhAMbS5gM+dn8OSjFS/ZqXn2hvAeimdHDhh\nX2Px6GO4pQKBgQCvRFtXnrHdfDA8KuUw/1PUZmbwLHDcmrx/YpOrUTbRPdUaXAmU\n3Xlgb5+qJtMBKFtzbM0iQtuIg3KCDMtVPQsG8qnPXGtJBurYzROWC3GlbOqBCfWj\nhs8g2b+qQ57Ls2y0EgUhiF1giqf+BaNlcHA6M8QnPHxlkm+8vk+WvCZkEQKBgA3x\nEgAB2R78VSgD8kIQ5iw8k0ARpmGS+pRcLywG8rA7dGbd6zoW6KFULpRVRp4BloQb\n0DROv1Q6T693nZtZt54A06Wfrgle3UydNYQ7A0RbGMjZvbhRGiFPLdTJpEhZS5Xe\nn5BPL4yFXwHRIpZGCOgVHoPFgcadUGnTYMKcf5sVAoGBAIZ9m/sZEluCG5Ql++fR\n+hecTsePlQx2xjoU9qdfwLnTfwYzPer5YDow6IbhF+MdeHUy6lJa2SyVkwjzrbAF\nt/8wypx8MTsl44mPn2A2uMXjOJBpd1XZXmyscA7qbPQWGLAmonc+/SIlQ2d+xDnh\nKSwaJhsE5SDr2JXZVhe8JOxe\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-earth@treed-world.iam.gserviceaccount.com",
+  "client_id": "100091288139318837517",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-earth%40treed-world.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
