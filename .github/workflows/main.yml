@@ -22,6 +22,7 @@ jobs:
 
     - name: Set up Google Cloud SDK with Service Account key
       run: |
+        echo "${{ secrets.EARTH_ENGINE_CREDENTIALS }}" > ${{ github.workspace }}/keyfile.json
         gcloud auth activate-service-account --key-file=${{ github.workspace }}/keyfile.json
 
     - name: Run Earth Engine script
