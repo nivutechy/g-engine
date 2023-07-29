@@ -22,16 +22,15 @@ jobs:
 
     - name: Set up Google Cloud SDK with Service Account key
       run: |
-        echo "${{ secrets.EARTH_ENGINE_CREDENTIALS }}" > keyfile.json
-        gcloud auth activate-service-account --key-file=keyfile.json
+        gcloud auth activate-service-account --key-file=${{ github.workspace }}/keyfile.json
 
     - name: Run Earth Engine script
-      run: python script.py  # Assuming the script.py is in the main directory
+      run: python ${{ github.workspace }}/script.py  # Assuming the script.py is in the main directory
 
     - name: Move exported image as an artifact
       run: |
-        mkdir -p artifacts
-        mv exported_image.tif artifacts/
+        mkdir -p ${{ github.workspace }}/artifacts
+        mv ${{ github.workspace }}/exported_image.tif ${{ github.workspace }}/artifacts/
       continue-on-error: true
 
     - name: Upload artifact
@@ -39,4 +38,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: exported-image
-        path: artifacts/exported_image.tif
+        path: ${{ github.workspace }}/artifacts/exported_image.tif
